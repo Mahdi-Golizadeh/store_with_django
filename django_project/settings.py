@@ -29,7 +29,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -156,9 +156,21 @@ AUTHENTICATION_BACKENDS = (
 )
 ACCOUNT_SESSION_REMEMBER = True # new
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False # new
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
 
 ACCOUNT_USERNAME_REQUIRED = False # new
 ACCOUNT_AUTHENTICATION_METHOD = "email" # new
 ACCOUNT_EMAIL_REQUIRED = True # new
 ACCOUNT_UNIQUE_EMAIL = True # new
+# django_project/settings.py
+DEFAULT_FROM_EMAIL = "admin@127.0.0.1" # new
+# django_project/settings.py
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" # new
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend" # new
+# # django_project/settings.py
+# DEFAULT_FROM_EMAIL = "https://app.mailgun.com/app/sending/domains/sandboxd3e0a19bf13c42739452fb163fd116d1.mailgun.org"
+# EMAIL_HOST = "smtp.mailgun.org"
+# EMAIL_HOST_USER = "postmaster@sandboxd3e0a19bf13c42739452fb163fd116d1.mailgun.org"
+# EMAIL_HOST_PASSWORD = "5339ccb40da89fd6d44ae3f3faac3078-2cc48b29-77fe642c"
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
