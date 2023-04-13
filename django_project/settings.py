@@ -167,3 +167,7 @@ ACCOUNT_UNIQUE_EMAIL = True # new
 DEFAULT_FROM_EMAIL = "admin@127.0.0.1" # new
 # django_project/settings.py
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" # new
+
+# django_project/settings.py
+MEDIA_URL = "/media/" # new
+MEDIA_ROOT = BASE_DIR / "media" # new
